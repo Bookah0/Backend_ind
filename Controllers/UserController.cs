@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 [Route("user")]
 public class UserController : ControllerBase
 {
-    private readonly EfService<User> userService;
+    private readonly EfService<UserEntity> userService;
     private readonly ILogger<FolderController> logger;
 
-    public UserController(EfService<User> userService, ILogger<FolderController> logger)
+    public UserController(EfService<UserEntity> userService, ILogger<FolderController> logger)
     {
         this.userService = userService;
         this.logger = logger;
@@ -26,9 +26,4 @@ public class UserController : ControllerBase
     {
         throw new NotImplementedException();
     }
-}
-
-public class CreateUserRequest()
-{
-
 }
