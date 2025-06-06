@@ -4,12 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("folder")]
-public class FolderController : ControllerBase
+public class FolderController : Controller
 {
-    private readonly EfService<Folder> folderService;
+    private readonly EfService<FolderEntity> folderService;
     private readonly ILogger<FolderController> logger;
 
-    public FolderController(EfService<Folder> folderService, ILogger<FolderController> logger)
+    public FolderController(EfService<FolderEntity> folderService, ILogger<FolderController> logger)
     {
         this.folderService = folderService;
         this.logger = logger;
