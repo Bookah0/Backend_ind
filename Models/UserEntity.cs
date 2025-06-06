@@ -1,8 +1,12 @@
+using Microsoft.AspNetCore.Identity;
+
 namespace Backend_ind.Models;
 
-public class UserEntity
+public class UserEntity : IdentityUser
 {
-    public required Guid Id { get; set; }
-    public required string Username { get; set; }
-    public required string Password { get; set; }
+    public UserEntity(string userName, string email) : base(userName)
+    {
+        Email = email;
+        UserName = userName;
+    }
 }

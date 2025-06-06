@@ -6,29 +6,35 @@ namespace Backend_ind.Services;
 
 public class EfService<T> : IService<T>
 {
-    private readonly IRepository<T> repository;
+    protected readonly IRepository<T> repository;
 
-    public async void Add(T entityToAdd)
+    public async Task AddAsync(T entityToAdd)
     {
         await repository.AddAsync(entityToAdd);
     }
 
-    public async void Delete(T entityToRemove)
+    public async Task DeleteAsync(T entityToRemove)
     {
         await repository.DeleteAsync(entityToRemove);
     }
 
-    public async Task<T> Get(Guid id)
+    public async Task DeleteAsync(Guid id)
+    {
+        var entity = await GetAsync(id);
+        await repository.DeleteAsync(entity);
+    }
+
+    public async Task<T> GetAsync(Guid id)
     {
         return await repository.GetAsync(id);
     }
 
-    public async Task<IEnumerable<T>> GetAll()
+    public async Task<IEnumerable<T>> GetAllAsync()
     {
         return await repository.GetAllAsync();
     }
 
-    public async void Update(T entityToUpdate)
+    public async Task UpdateAsync(T entityToUpdate)
     {
         await repository.UpdateAsync(entityToUpdate);
     }

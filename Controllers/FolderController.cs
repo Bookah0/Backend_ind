@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 [Route("folder")]
 public class FolderController : Controller
 {
-    private readonly EfService<FolderEntity> folderService;
+    private readonly FolderService folderService;
     private readonly ILogger<FolderController> logger;
 
-    public FolderController(EfService<FolderEntity> folderService, ILogger<FolderController> logger)
+    public FolderController(FolderService folderService, ILogger<FolderController> logger)
     {
         this.folderService = folderService;
         this.logger = logger;
@@ -18,23 +18,33 @@ public class FolderController : Controller
     [HttpPost("create")]
     public async Task<IActionResult> CreateFolder([FromBody] CreateFolderRequest request)
     {
-        throw new NotImplementedException();
+        try
+        {
+            await folderService.AddFromRequest(request);
+            return Ok();
+        }
+        catch (Exception)
+        {
+            throw;
+        }
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetFolder(Guid id)
     {
-        throw new NotImplementedException();
-    }
-
-    [HttpDelete("delete/{id}")]
-    public async Task<IActionResult> DeleteFolder(Guid id)
-    {
-        throw new NotImplementedException();
+        try
+        {
+            var folder = await folderService.GetAsync(id);
+            return Ok(folder);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
     }
 }
 
 public class CreateFolderRequest()
 {
-
+    public required string name { get; set; }
 }
