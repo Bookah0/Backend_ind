@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("folder")]
-public class FolderController : Controller
+public class FolderController : ControllerBase
 {
     private readonly FolderService folderService;
     private readonly ILogger<FolderController> logger;
@@ -42,9 +42,4 @@ public class FolderController : Controller
             throw;
         }
     }
-}
-
-public class CreateFolderRequest()
-{
-    public required string name { get; set; }
 }

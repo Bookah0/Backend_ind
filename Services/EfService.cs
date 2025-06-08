@@ -6,7 +6,7 @@ namespace Backend_ind.Services;
 
 public class EfService<T> : IService<T>
 {
-    protected readonly IRepository<T> repository;
+    protected IRepository<T> repository;
 
     public async Task AddAsync(T entityToAdd)
     {

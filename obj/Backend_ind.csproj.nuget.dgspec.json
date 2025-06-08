@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Antho\\Documents\\GitHub\\Backend_ind\\Backend_ind.csproj": {}
+    "C:\\Users\\Anthon\\Desktop\\Backend_ind\\Backend_ind.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Antho\\Documents\\GitHub\\Backend_ind\\Backend_ind.csproj": {
+    "C:\\Users\\Anthon\\Desktop\\Backend_ind\\Backend_ind.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Antho\\Documents\\GitHub\\Backend_ind\\Backend_ind.csproj",
+        "projectUniqueName": "C:\\Users\\Anthon\\Desktop\\Backend_ind\\Backend_ind.csproj",
         "projectName": "Backend_ind",
-        "projectPath": "C:\\Users\\Antho\\Documents\\GitHub\\Backend_ind\\Backend_ind.csproj",
-        "packagesPath": "C:\\Users\\Antho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Antho\\Documents\\GitHub\\Backend_ind\\obj\\",
+        "projectPath": "C:\\Users\\Anthon\\Desktop\\Backend_ind\\Backend_ind.csproj",
+        "packagesPath": "C:\\Users\\Anthon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anthon\\Desktop\\Backend_ind\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Antho\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Anthon\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

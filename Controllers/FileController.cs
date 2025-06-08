@@ -1,9 +1,10 @@
+using System.Security.Claims;
 using Backend_ind.Models;
 using Backend_ind.Services;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("folder")]
+[Route("file")]
 public class FileController : ControllerBase
 {
     private readonly FileService fileService;
@@ -56,10 +57,4 @@ public class FileController : ControllerBase
             throw new Exception();
         }
     }
-}
-
-public class UploadFileRequest
-{
-    public required string name { get; set; }
-    public required string content { get; set; }
 }

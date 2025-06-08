@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Backend_ind.Repositories;
 
-public class EfPostRepository<T> : IRepository<T> where T : class
+public class EfRepository<T> : IRepository<T> where T : class
 {
     private readonly AppDbContext context;
 
-    public EfPostRepository(AppDbContext context)
+    public EfRepository(AppDbContext context)
     {
         this.context = context;
     }
@@ -27,7 +27,7 @@ public class EfPostRepository<T> : IRepository<T> where T : class
         return entityToRemove;
     }
 
-    public async Task<T> GetAsync(Guid id)
+    public async Task<T?> GetAsync(Guid id)
     {
         var item = await context.Set<T>().FindAsync(id);
         return item;
